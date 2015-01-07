@@ -12,10 +12,10 @@ attribute 'rsc_java/install_flavor',
   :description => 'Version of Java to be installed',
   :display     => 'rsc_java/install_flavor',
   :recipes     => ['rsc_java::default'],
-  :type        => 'array',
+  :type        => 'string',
   :choice      => ['oracle','oracle_rpm','openjdk','ibm','windows'],
   :default     => 'openjdk',
-  :required    => 'required'
+  :required    => 'recommended'
 
 attribute 'rsc_java/jdk_version',
   :description => 'JDK version to install',
@@ -29,6 +29,6 @@ attribute 'rsc_java/oracle/accept_oracle_download_terms',
   :description => 'Do you agree to the Oracle download Terms of Service?',
   :display     => 'rsc_java/oracle/accept_oracle_download_terms',
   :recipes     => ['rsc_java::default'],
-  :type        => 'array',
+  :type        => 'string',
   :choice      => ['true', 'false'],
   :required    => 'required'
