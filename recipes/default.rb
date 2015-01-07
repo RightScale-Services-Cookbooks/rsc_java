@@ -7,8 +7,8 @@
 # All rights reserved - Do Not Redistribute
 #
 
-node.override['java']['install_flavor'] = 'oracle'
-node.override['java']['jdk_version'] = '8'
-node.override['java']['oracle']['accept_oracle_download_terms'] = 'true'
+node.override['java']['install_flavor']                         = node['rsc_java']['install_flavor']
+node.override['java']['jdk_version']                            = node['rsc_java']['jdk_version']
+node.override['java']['oracle']['accept_oracle_download_terms'] = node['rsc_java']['oracle']['accept_oracle_download_terms']
 
 include_recipe 'java::default'
