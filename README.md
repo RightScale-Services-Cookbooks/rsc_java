@@ -1,65 +1,16 @@
 rsc_java Cookbook
 =================
-TODO: RightScale overrides for java
+Provides an interface to install JAVA using inputs for the RightScale ServerTemplets.   
 
 
-Requirements
-------------
+### Requirements
+* java cookbook - https://github.com/agileorbit-cookbooks/java
 
-e.g.
-#### packages
-- `toaster` - rsc_java needs toaster to brown your bagel.
+### Attributes
+* rsc_java/install_flavor - flavor of java to install.  see java cookbook for available flavors
+* rsc_java/jdk_version - 6,7,8 etc
+* rsc_java/oracle/accept_oracle_download_terms - true or false.  
 
-Attributes
-----------
-TODO: List your cookbook attributes here.
 
-e.g.
-#### rsc_java::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['rsc_java']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
-
-Usage
------
-#### rsc_java::default
-TODO: Write usage instructions for each cookbook.
-
-e.g.
-Just include `rsc_java` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[rsc_java]"
-  ]
-}
-```
-
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
-
-License and Authors
--------------------
-Authors: TODO: List authors
+### Usage
+Add the recipe to your run list, or include it in another recipe.
